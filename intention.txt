@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Intention to award notice</h1>
+<hr>
+<h2>HTML Forms</h2>
+
+<form action="intention-exec.php" method="post" enctype="multipart/form-data">
+  Title:<br>
+  <input type="text" name="awardtitle" value="">
+  <br>
+  Description:<br>
+  <input type="text" name="awarddescription" value="">
+  <br>
+  Close Date:<br>
+  <input type="text" name="awardclosedate" value="">
+  <br>
+  File<br>
+  <input type="file" name="awardfileToUpload" id="fileToUpload">
+  <br>
+  Institution:<br>
+  <input type="text" name="awarddepartment" value="">
+  <br>
+  <br>
+  <input type="submit" value="Submit">
+</form> 
+
+
+</body>
+</html>

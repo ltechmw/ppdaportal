@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Procurement Notices</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Page level plugin CSS-->
+  <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin.css" rel="stylesheet">
+
+</head>
+<?php include 'advertuarchive.php'; ?> 
+		<table class="table table-striped">
+		<tr>
+		<th>Title</th>
+		<th>Procuring and Disposal Entity</th>		
+		<th>Reference</th>
+		<th>Closing Date</th>
+		<th>Size (Bytes)</th>
+		<th>Action</th>
+		</tr>
+		
+		<?php
+include 'conne.php';
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT * FROM advup WHERE status != '2'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+		?>
+		
+		
+		<tr>
+		
+		<td><a href="procnoticesdownload.php?aid=<?php echo $row["advID"]; ?>"><?php echo $row["advtitle"]; ?></a></td>
+		<td><?php echo $row["advdept"]; ?></td>
+			<td><a href="procnoticesdownload.php?aid=<?php echo $row["advID"]; ?>"><?php echo $row["advreference"]; ?></a></td>
+		<td><?php echo $row["advclosedate"]; ?></td>
+		
+	
+		<td><?php echo $row["size"]; ?></td>	
+		<td><a href="procnoticesdownload.php?aid=<?php echo $row["advID"]; ?>"><button class="btn btn-danger btn-sm">Download</button></a></td>
+		
+		<tr>
+		
+		
+		<?php
+    }
+} else {
+    echo "0 results";
+}
+$conn->close();
+?>
+
+
+</table>
+</html>

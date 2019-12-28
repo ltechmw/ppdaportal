@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>HTML Forms</h2>
+
+<?php
+include 'conne.php';
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT * FROM users WHERE PPDrole = '1'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+		?>
+		
+        
+		
+<form action="adminedit.php" method="post">
+  First Name:<br>
+  <input type="text" name="fname" value="<?php echo $row["fname"]; ?>">
+  <br>
+  Last Name:<br>
+  <input type="text" name="lname" value="<?php echo $row["lname"]; ?>">
+  <br>
+  Organisation:<br>
+  <input type="text" name="organisation" value="<?php echo $row["organisation"]; ?>">
+  <br>
+  Email:<br>
+  <input type="text" name="email" value="<?php echo $row["email"]; ?>">
+  <br>
+  Username:<br>
+  <input type="text" name="username" value="<?php echo $row["username"]; ?>">
+  <br>
+  Password:<br>
+  <input type="password" name="password" value="<?php echo $row["password"]; ?>">
+  
+  
+  <br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+		<?php
+    }
+} else {
+    echo "0 results";
+}
+$conn->close();
+?>
+
+
+
+</body>
+</html>

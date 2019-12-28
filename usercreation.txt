@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>HTML Forms</h2>
+
+<form action="usercreation-exec.php" method="post">
+  First Name:<br>
+  <input type="text" name="fname" value="">
+  <br>
+  Last Name:<br>
+  <input type="text" name="lname" value="">
+  <br>
+  Organisation:<br>
+  <input type="text" name="organisation" value="">
+  <br>
+  Email:<br>
+  <input type="text" name="email" value="">
+  <br>
+  Username:<br>
+  <input type="text" name="username" value="">
+  <br>
+  Password:<br>
+  <input type="password" name="password" value="">
+  <br>
+  Role:<br>
+  <select name = "role">
+	<option value="2">User</option>
+	<option value="1">Administrator</option>
+  </select>
+  <br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+
+</body>
+</html>

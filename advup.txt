@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Upload Advert</h1>
+<hr>
+<h2>HTML Forms</h2>
+
+<form action="advertup-exec.php" method="post" enctype="multipart/form-data">
+  Title:<br>
+  <input type="text" name="title" value="">
+  <br>
+  Description:<br>
+  <input type="text" name="description" value="">
+  <br>
+  Close Date:<br>
+  <input type="text" name="closedate" value="">
+  <br>
+  File<br>
+  <input type="file" name="fileToUpload" id="fileToUpload">
+  <br>
+  Department:<br>
+  <input type="text" name="department" value="">
+  <br>
+  <br>
+  <input type="submit" value="Submit">
+</form> 
+
+
+</body>
+</html>

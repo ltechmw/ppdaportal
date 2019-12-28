@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Administrator Page</h1>
+<hr>
+<h3><a href = "usercreation.php">Create User</a></h3>
+<h3><a href = "admineditint.php">Edit Profile</a></h3>
+<h3><a href = "usersdisplay.php">View users</a></h3>
+<h3><a href = "advertup.php">Add procurement notice</a></h3>
+<h3><a href = "intentionaward.php">Add Intention to award notice</a></h3>
+<h3><a href = "procurementnoticesdisplay.php">View procurement notices</a></h3>
+<h3><a href = "intentionawarddisplay.php">View Intention to award notices</a></h3>
+</body>
+</html>
