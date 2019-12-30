@@ -113,9 +113,9 @@
                 <div class="card-body-icon">
                   <i class="fas fa-fw fa-life-ring"></i>
                 </div>
-                <div class="mr-5">Add User</div>
+                <div class="mr-5">Award Notices</div>
               </div>
-              <a class="card-footer text-white clearfix small z-1" href="usercreation.php">
+              <a class="card-footer text-white clearfix small z-1" href="awardnotices.php">
                 <span class="float-left">View Details</span>
                 <span class="float-right">
                   <i class="fas fa-angle-right"></i>
