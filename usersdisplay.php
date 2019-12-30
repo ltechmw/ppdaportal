@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Admin: Users Display</title>
+  <title>Admin: View Users</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -20,7 +18,7 @@
   <!-- Custom styles for this template-->
   <link href="css/sb-admin.css" rel="stylesheet">
 
-</head>
+  </head>
 
 <body id="page-top">
 
@@ -64,7 +62,6 @@
 		<th>Email</th>
 		<th>Action</th>
 		<th>Action</th>
-		<th>Action</th>
 		</tr>
 		
 		<?php
@@ -93,8 +90,7 @@ if ($result->num_rows > 0) {
 		<td><?php echo $row["organisation"]; ?></td>
 		<td><?php echo $row["email"]; ?></td>
 		<td><a href="useredit.php?id=<?php echo $row["usersID"]; ?>"><button class="btn btn-primary btn-sm">Edit</button></a></td>
-		<td><button class="btn btn-warning btn-sm">Block</button></td>
-		<td><button class="btn btn-danger btn-sm">Delete</button></td>
+		<td><a href="userdelete.php?id=<?php echo $row["usersID"]; ?>"><button class="btn btn-danger btn-sm">Delete</button></td>
 		
 		<tr>
 		
